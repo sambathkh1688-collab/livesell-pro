@@ -1,0 +1,26 @@
+{
+  "name": "livesell-pro",
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "client/$1"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://livesell-pro-backend.railway.app",
+    "NEXT_PUBLIC_FACEBOOK_APP_ID": "1889698918216093"
+  },
+  "build": {
+    "env": {
+      "NEXT_TELEMETRY_DISABLED": "1"
+    }
+  },
+  "outputDirectory": "client/.next"
+}

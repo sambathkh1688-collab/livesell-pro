@@ -1,0 +1,30 @@
+{
+  "name": "livesell-pro-backend",
+  "description": "LiveSell Pro Backend API - The SystemKH Killer",
+  "build": {
+    "commands": [
+      "cd server",
+      "npm install",
+      "npm run build"
+    ]
+  },
+  "deploy": {
+    "startCommand": "cd server && npm start",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  },
+  "environments": {
+    "production": {
+      "variables": {
+        "NODE_ENV": "production",
+        "PORT": "${{PORT}}",
+        "DATABASE_URL": "${{DATABASE_URL}}",
+        "FACEBOOK_APP_ID": "1889698918216093",
+        "FACEBOOK_APP_SECRET": "d89b2c56b7b1acec7f91c9206538017c",
+        "JWT_SECRET": "livesell-pro-production-secret-change-this",
+        "JWT_EXPIRES_IN": "7d",
+        "CLIENT_URL": "https://livesell-pro.vercel.app"
+      }
+    }
+  }
+}

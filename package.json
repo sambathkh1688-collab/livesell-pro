@@ -1,0 +1,37 @@
+{
+  "name": "unified-facebook-server",
+  "version": "1.0.0",
+  "description": "Unified Facebook Integration Server - Single stable process",
+  "main": "unified-server.js",
+  "scripts": {
+    "dev": "nodemon unified-server.js",
+    "start": "node unified-server.js",
+    "build": "next build client",
+    "test": "echo \"Facebook integration ready for testing\" && exit 0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.0",
+    "express": "^4.18.0",
+    "next": "^14.2.33",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "axios": "^1.12.2",
+    "better-sqlite3": "^12.4.1",
+    "nodemon": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "facebook",
+    "oauth",
+    "integration",
+    "next.js",
+    "express"
+  ],
+  "author": "LiveSell Pro",
+  "license": "MIT"
+}
